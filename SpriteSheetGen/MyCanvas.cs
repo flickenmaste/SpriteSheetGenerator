@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.IO;
 
 namespace SpriteSheetGen
 {
@@ -21,11 +22,11 @@ namespace SpriteSheetGen
 
         public void GenSheet(string[] images)
         {
-            BitmapFrame[] frames = null;
-            int[] imageWidth = null;
-            int[] imageHeight = null;
-            int iW;
-            int iH;
+            BitmapFrame[] frames = new BitmapFrame[images.Length];
+            int[] imageWidth = new int[images.Length];
+            int[] imageHeight = new int[images.Length];
+            int iW = new int();
+            int iH = new int();
             // Load images and get sizes
             for (int i = 0; i < images.Length; i++)
             {
@@ -33,8 +34,38 @@ namespace SpriteSheetGen
                 imageWidth[i] = frames[i].PixelWidth;
                 imageHeight[i] = frames[i].PixelHeight;
             }
-            iW = frames[0].PixelWidth;
-            iH = frames[0].PixelHeight;
+
+            // Get max image size
+            for (int i = 0; i < images.Length; i++)
+            {
+                iW += frames[i].PixelWidth;
+                iH += frames[i].PixelHeight;
+            }
+
+            // Draws the images into a DrawingVisual component
+            DrawingVisual drawingVisual = new DrawingVisual();
+            using (DrawingContext drawingContext = drawingVisual.RenderOpen())
+            {
+                drawingContext.DrawImage(frames[0], new Rect(0, 0, imageWidth[0], imageHeight[0]));
+                drawingContext.DrawImage(frames[1], new Rect(imageWidth[1], 0, imageWidth[1], imageHeight[1]));
+                drawingContext.DrawImage(frames[2], new Rect(0, imageHeight[2], imageWidth[2], imageHeight[2]));
+                drawingContext.DrawImage(frames[3], new Rect(imageWidth[3], imageHeight[3], imageWidth[3], imageHeight[3]));
+            }
+
+            // Converts the Visual (DrawingVisual) into a BitmapSource
+            RenderTargetBitmap bmp = new RenderTargetBitmap(iW, iH, 96, 96, PixelFormats.Pbgra32);
+            bmp.Render(drawingVisual);
+
+            // Creates a PngBitmapEncoder and adds the BitmapSource to the frames of the encoder
+            PngBitmapEncoder encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(bmp));
+
+            string directory = Directory.GetCurrentDirectory();
+
+            // Saves the image into a file using the encoder
+            using (Stream stream = File.Create(directory + @"\tile.png"))
+                encoder.Save(stream);
+
         }
 
         protected override void OnRender(DrawingContext dc)

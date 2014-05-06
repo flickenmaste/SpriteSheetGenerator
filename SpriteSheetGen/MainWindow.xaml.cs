@@ -46,9 +46,12 @@ namespace SpriteSheetGen
                 // and load the image 
 
                 canvas1.LoadImage(filename[0]);
+                canvas1.GenSheet(filename);
 
-            } 
-        } 
+            } 
+
+        } 
+
     }
 
     public class MyVisualHost : FrameworkElement
