@@ -1,0 +1,15 @@
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\bin\Release\SpriteSheetGen.exe
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\bin\Release\SpriteSheetGen.pdb
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\MainWindow.g.cs
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\App.g.cs
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\SpriteSheetGen_MarkupCompile.cache
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\SpriteSheetGen_MarkupCompile.lref
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\MainWindow.baml
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\SpriteSheetGen.g.resources
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\SpriteSheetGen.Properties.Resources.resources
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\SpriteSheetGen.exe
+C:\Users\Student\Desktop\Will2\C#\SpriteSheetGen\obj\x86\Release\SpriteSheetGen.pdb

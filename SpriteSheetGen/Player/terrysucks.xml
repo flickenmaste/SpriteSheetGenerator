@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TextureAtlas imagePath="Naw">
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Back1.png" x="0" y="0" width="22" height="30" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Back2.png" x="22" y="0" width="22" height="29" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Back3.png" x="44" y="0" width="22" height="29" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Front1.png" x="66" y="0" width="22" height="30" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Front2.png" x="88" y="0" width="22" height="29" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Front3.png" x="110" y="0" width="22" height="29" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Left1.png" x="132" y="0" width="16" height="31" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Left2.png" x="148" y="0" width="17" height="31" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Left3.png" x="165" y="0" width="16" height="31" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Right1.png" x="181" y="0" width="16" height="31" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Right2.png" x="197" y="0" width="17" height="31" />
+  <SubTexture name="C:\Users\Student\Desktop\Player\Player_Right3.png" x="214" y="0" width="16" height="31" />
+</TextureAtlas>

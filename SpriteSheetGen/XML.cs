@@ -27,7 +27,7 @@ namespace SpriteSheetGen
             {
                 XElement node = new XElement("SubTexture");
 
-                BitmapFrame eek = frames[i];
+                BitmapFrame eek = frames[i];    // cache
 
                 node.SetAttributeValue("name", filename[i]);
                 node.SetAttributeValue("x", xy[i].X);
@@ -38,14 +38,14 @@ namespace SpriteSheetGen
                 XMLelem[i] = node;
             }
 
-            XElement XMLRootNode = new XElement("TextureAtlas", XMLelem);
+            XElement XMLRootNode = new XElement("TextureAtlas", XMLelem);   // add root
             XMLRootNode.SetAttributeValue("imagePath", "Naw");
 
             XDocument XMLdoc = new XDocument(XMLdec, XMLRootNode);
 
             AtlasXML = XMLdoc;
 
-            Microsoft.Win32.SaveFileDialog saveDiag = new Microsoft.Win32.SaveFileDialog();
+            Microsoft.Win32.SaveFileDialog saveDiag = new Microsoft.Win32.SaveFileDialog(); // windows save
             Nullable<bool> diagResult = saveDiag.ShowDialog();
 
             // User select
